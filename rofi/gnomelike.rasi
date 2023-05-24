@@ -1,0 +1,95 @@
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	spacing: 0;
+
+	font: "JetBrains Mono Bold 16";
+
+	bg:			#202020;
+	bg-alt:		#404040;
+	text:		#CFCF88;
+
+	background-color: var(bg);
+	text-color: var(text);
+}
+
+window {
+	border: 2px;
+	border-color: var(bg-alt);
+	border-radius: 0.5em;
+}
+
+mainbox {}
+
+inputbar {
+	padding: 0.25em;
+}
+
+prompt {
+	padding: 0.5em;
+}
+
+entry {
+	padding: 0.5em;
+}
+
+#fr {
+	padding: 0.5em;
+	background-color: #2222AA;
+}
+
+#ns {
+	padding: 0.5em;
+	background-color: #AA2222;
+}
+
+ci {
+	padding: 0.5em;
+	background-color: #22AA22;
+}
+
+message {
+	padding: 0.5em;
+	background-color: #FF00FF;
+}
+
+textbox {
+	padding: 0.5em;
+	background-color: #008800;
+}
+
+listview {
+	fixed-lines: true;
+	lines: 4;
+	fixed-columns: true;
+	columns: 4;
+}
+
+element {
+	orientation: vertical;
+	padding: 0.5em;
+	border-radius: 0.45em;
+}
+
+element-icon { 
+	size: 5em;
+}
+
+element-text {
+	padding: 0.25em;
+}
+
+element selected, element-icon selected, element-text selected, dummy selected { 
+	background-color: var(bg-alt);
+}
+
+mode-switcher {
+	padding: 0.5em;
+	background-color: #888800;
+}
+
+Button {
+	padding: 0.5em;
+	background-color: #008888;
+}

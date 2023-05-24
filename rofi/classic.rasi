@@ -1,0 +1,56 @@
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	spacing: 0;
+
+	font: "JetBrains Mono Bold 14";
+
+	bg: ${DARK};
+	bg-alt: ${RICH_BLACK};
+	text: ${WHITE_BONE};
+
+	background-color: var(bg);
+	text-color: var(text);
+}
+
+window {
+	width: 25%;
+}
+
+inputbar {
+	padding: 0.25em;
+	children: [entry, prompt];
+}
+
+prompt {
+	padding: 0.5em;
+}
+
+entry {
+	padding: 0.5em;
+}
+
+listview {
+	lines: 8;
+}
+
+element {
+	padding: 0.5em;
+}
+element-icon { size: 1.5em; }
+element-text { padding: 0.25em; }
+
+element selected, element-icon selected, element-text selected {
+	background-color: var(bg-alt);
+}
+
+mode-switcher {
+	padding: 0.5em;
+	background-color: #888800;
+}
+
+Button {
+	padding: 0.5em;
+	background-color: #008888;
+}
