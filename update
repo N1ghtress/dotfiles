@@ -7,3 +7,4 @@ cp -r ~/.config/polybar .
 cp -r ~/.config/rofi .
 cp -r ~/.config/sxhkd .
 cp ~/.zshrc .
+cp ~/.zshenv .
