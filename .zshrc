@@ -6,9 +6,9 @@
 # Aliases
 alias ls='ls --color=auto'
 alias la='ls -a --color=auto'
+alias ll='ls -l --color=auto'
 
 alias c='clear'
-alias ssh_flat='ssh dragonfly@87.90.77.29 -p 42069'
 
 # zsh config
 
