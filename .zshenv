@@ -4,12 +4,11 @@ path=(~/.local/bin $path)
 path=(/usr/lib/jvm/default-runtime/ $path)
 export PATH
 
+export BROWSER=/usr/bin/firefox
+export EDITOR=/usr/bin/code
+
 export PS1='%B%F{yellow}%~%f%b %F{magenta}->%f '
 export PATH=$PATH:/home/kn1ghtress/.local/bin/:.:
-
-# ANTLR 4 setup
-export ANTLR4="java -jar $HOME/lib/antlr-4.11.1-complete.jar"
-alias antlr4="java -jar $HOME/lib/antlr-4.11.1-complete.jar"
 
 # Colors
 export DARK="#37352F"
