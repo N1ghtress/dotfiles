@@ -6,5 +6,6 @@ cp -r ~/.config/picom .
 cp -r ~/.config/polybar .
 cp -r ~/.config/rofi .
 cp -r ~/.config/sxhkd .
+cp -r ~/.config/helix .
 cp ~/.zshrc .
 cp ~/.zshenv .
