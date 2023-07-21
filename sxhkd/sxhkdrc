@@ -15,7 +15,7 @@ super + e
 	rofi -show run
 
 # screen lock
-super + l
+super + alt + l 
 	betterlockscreen -l blur
 
 # window switcher

@@ -4,11 +4,13 @@
 [[ $- != *i* ]] && return
 
 # Aliases
-alias ls='ls --color=auto'
-alias la='ls -a --color=auto'
-alias ll='ls -l --color=auto'
+alias ls="ls --color=auto"
+alias la="ls -a --color=auto"
+alias ll="ls -l --color=auto"
 
-alias c='clear'
+alias c="clear"
+
+alias hx="helix"
 
 # zsh config
 

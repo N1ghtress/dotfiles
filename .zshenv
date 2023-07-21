@@ -5,7 +5,7 @@ path=(/usr/lib/jvm/default-runtime/ $path)
 export PATH
 
 export BROWSER=/usr/bin/firefox
-export EDITOR=/usr/bin/code
+export EDITOR=/usr/bin/helix
 
 export PS1='%B%F{yellow}%~%f%b %F{magenta}->%f '
 export PATH=$PATH:/home/kn1ghtress/.local/bin/:.:

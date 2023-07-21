@@ -18,18 +18,12 @@ export YELLOW_GREEN="#B0DB43"
 export BLUE="#355691"
 export GREEN="#0C7C59"
 
-# sxhkd
-pgrep -x sxhkd > /dev/null || sxhkd &
-# Cursor
-xsetroot -cursor_name left_ptr &
-# Wallpaper
-/home/kn1ghtress/.fehbg &
-# Polybar
-~/.config/polybar/launch.sh gummy &
-# Picom
-~/.config/picom/launch.sh &
-# Update check
-update.sh &
+
+pgrep -x sxhkd > /dev/null || sxhkd & # sxhkd
+xsetroot -cursor_name left_ptr & # cursor
+/home/kn1ghtress/.fehbg & # wallpaper
+~/.config/polybar/launch.sh gummy & # bar
+~/.config/picom/launch.sh & # compositor
 
 # 
 # bspwm config
