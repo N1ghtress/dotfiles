@@ -1,6 +1,7 @@
 #! /bin/sh
 
 cp -r bspwm ~/.config
+cp -r helix ~/.config
 cp -r kitty ~/.config
 cp -r nvim ~/.config
 cp -r picom ~/.config
