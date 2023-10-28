@@ -6,9 +6,9 @@
 
 	font: "JetBrains Mono Bold 14";
 
-	bg: ${DARK};
-	bg-alt: ${RICH_BLACK};
-	text: ${WHITE_BONE};
+	bg: env(DARK, #00FF00);
+	bg-alt: env(SMOKY_BLACK, #FF0000);
+	text: env(WHITE_BONE, #0000FF);
 
 	background-color: var(bg);
 	text-color: var(text);

@@ -1,16 +1,17 @@
-theme = "tokyonight_storm"
+theme = "tokyonight_transparent"
 
 [editor]
 line-number = "relative"
+bufferline = "always"
 mouse = false
 rulers = [80]
 shell = ["zsh", "-c"]
 
 [editor.cursor-shape]
 insert = "bar"
-normal = "block"
-select = "underline"
 
 [editor.soft-wrap]
 enable = true
 max-wrap = 20
+
+[keys.normal]

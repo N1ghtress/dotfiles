@@ -1,0 +1,7 @@
+inherits = "tokyonight"
+
+"comment" = { fg = "light-green", modifiers = ["italic"] }
+
+"ui.background" = {}
+"ui.linenr" = ""
+"ui.gutter.selected" = { bg = "background" }

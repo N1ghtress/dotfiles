@@ -20,7 +20,8 @@ launch-bar () {
 	# Wait until the processes have been shut down
 	while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-	polybar --reload kn1ghtbar -c "$DIR"/"$style"/config.ini &
+	# polybar --reload kn1ghtbar -c "$DIR"/"$style"/config.ini &
+	polybar --reload kn1ghtbar -c "$DIR"/config.ini &
 }
 
 style=$1

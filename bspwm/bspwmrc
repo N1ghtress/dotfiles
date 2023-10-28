@@ -1,13 +1,11 @@
 #!/bin/sh
 
 #
-# autostart
-#
-
 # Colors
+#
 export DARK="#37352F"
-export RICH_BLACK="#101419"
 export WHITE_BONE="#D8D0C1"
+export SMOKY_BLACK="#100C08"
 export PEACH="#FFA570"
 export LIGHT_PEACH="#FFCBAD"
 export YELLOW="#FFB30F"
@@ -18,8 +16,11 @@ export YELLOW_GREEN="#B0DB43"
 export BLUE="#355691"
 export GREEN="#0C7C59"
 
+#
+# autostart
+#
 
-pgrep -x sxhkd > /dev/null || sxhkd & # sxhkd
+pgrep -x sxhkd > /dev/null || sxhkd & # shhkd, shortcuts
 xsetroot -cursor_name left_ptr & # cursor
 /home/kn1ghtress/.fehbg & # wallpaper
 ~/.config/polybar/launch.sh gummy & # bar
@@ -32,7 +33,7 @@ bspc monitor -d 1 2 3 4 5
 
 bspc config border_radius	0
 bspc config border_width	0
-bspc config window_gap		0
+bspc config window_gap		10
 
 bspc config top_padding		0
 bspc config bottom_padding	0
@@ -49,11 +50,13 @@ bspc config pointer_action1 move
 bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
 
-# colors
+# bspwm colors
 # bspc config focused_border_color \#CFCF88
 # bspc config active_border_color \#8C8C44
-# bspc config normal_border_color \#202020
+bspc config focused_border_color \#202020
+bspc config active_border_color \#202020
+bspc config normal_border_color \#202020
 
 # window rules
-bspc rule -a Gimp desktop='^6'
+bspc rule -a Gimp desktop='^5'
 bspc rule -a Chromium desktop='^1'
