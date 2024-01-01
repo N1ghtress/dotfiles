@@ -1,6 +1,4 @@
-inherits = "tokyonight"
-
-"comment" = { fg = "light-green", modifiers = ["italic"] }
+inherits = "gruvbox"
 
 "ui.background" = {}
 "ui.linenr" = ""

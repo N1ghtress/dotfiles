@@ -4,9 +4,10 @@
 [[ $- != *i* ]] && return
 
 # Aliases
-alias ls="lsd --color=auto"
-alias la="lsd -a --color=auto"
-alias ll="lsd -l --color=auto"
+alias ls="lsd --color=auto --group-directories-first"
+alias la="lsd -a --color=auto --group-directories-first"
+alias ll="lsd -l --color=auto --group-directories-first"
+alias lla="lsd -la --color=auto --group-directories-first"
 alias grap="grep --color"
 
 alias c="clear"

@@ -6,6 +6,10 @@
 super + Return
 	kitty
 
+# dropdown terminal
+super + a
+	tdrop -ma -w -20 -x 10 -y 30 kitty
+
 # program launcher
 super + @space
 	rofi -show drun
