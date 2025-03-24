@@ -8,7 +8,7 @@ alias ls="lsd --color=auto --group-directories-first"
 alias la="lsd -a --color=auto --group-directories-first"
 alias ll="lsd -l --color=auto --group-directories-first"
 alias lla="lsd -la --color=auto --group-directories-first"
-alias grap="grep --color"
+alias grep="grep --color"
 
 alias c="clear"
 

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# This script removes directories and then set up a symlink
+
 if [[ $EUID -eq 0 ]]; then
    echo "Do not run a stranger's script as root ! This script shouldn't be ran as root." 1>&2
    exit 1
@@ -19,7 +21,7 @@ for d in $DOTFILES_DIR/*/; do
    SRC_DIR=${d%/}
    DST_DIR="$HOME/.config/"
    DEL_DIR="$DST_DIR${DIRS[-1]}"
-   # echo "SRC_DIR=$SRC_DIR DST_DIR=$DST_DIR DEL_DIR=$DEL_DIR"
+   echo "SRC_DIR=$SRC_DIR DST_DIR=$DST_DIR DEL_DIR=$DEL_DIR"
    rm -rf $DEL_DIR 
    ln -sf $SRC_DIR $DST_DIR
 done
