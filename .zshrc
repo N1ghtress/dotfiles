@@ -10,16 +10,14 @@ alias ll="lsd -l --color=auto --group-directories-first"
 alias lla="lsd -la --color=auto --group-directories-first"
 alias grep="grep --color"
 
+# Autocomplete case insensitive
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
 alias c="clear"
-
 alias hx="helix"
-
-# zsh config
 
 # Key bindings
 bindkey "^[[3~" delete-char
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
-
-cat<<'EOF'
-EOF

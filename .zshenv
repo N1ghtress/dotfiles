@@ -25,6 +25,7 @@ export PYTHONUSERBASE="$XDG_DATA_HOME/python"
 # XDG Applications
 export BROWSER=/usr/bin/firefox
 export EDITOR=/usr/bin/helix
+export TERMINAL=/usr/bin/kitty
 
 #Prompts
 export PS1='%B%F{yellow}%~%f%b %F{magenta}|>%f ' # Best prompt ever created.
