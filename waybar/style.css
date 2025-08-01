@@ -1,3 +1,9 @@
+@define-color background #6C3344;
+@define-color foreground #D5A9AB;
+@define-color primary #D4747F;
+@define-color secondary #CC536B;
+@define-color alert #A8BDDC;
+
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: Ubuntu Bold, Arial, sans-serif;
@@ -5,15 +11,15 @@
 }
 
 window#waybar {
-    border: 2px solid #434c5e;
-    background-color: rgba(0,0,0,0.4);
-    color: #ffffff;
+    border: 2px solid @alert;
+    background-color: @background;
+    color: @foreground
 }
 
 #workspaces {
     margin: 2px 4px;
     border-radius: 10px;
-    background-color: #3b4252;
+    background-color: @primary
 }
 
 #workspaces button {
@@ -22,7 +28,7 @@ window#waybar {
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: @alert;
 }
 
 #mode {
@@ -42,6 +48,7 @@ window#waybar {
 #pulseaudio-slider,
 #wireplumber,
 #custom-media,
+#custom-power,
 #tray,
 #mode,
 #idle_inhibitor,
@@ -51,14 +58,12 @@ window#waybar {
 #mpd {
     padding: 0 7px;
     margin: 2px;
-    color: #ffffff;
+    color: @foreground;
+    background-color: @secondary
 }
 
 #custom-power {
-    padding: 0 7px;
-    margin: 2px;
     background-color: rgba(0,0,0,0);
-    color: #ffffff;
 }
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > * {
