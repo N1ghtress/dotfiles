@@ -27,6 +27,13 @@ export BROWSER=/usr/bin/firefox
 export EDITOR=/usr/bin/helix
 export TERMINAL=/usr/bin/kitty
 
+# Colors
+export COLOR1=#D4747F
+export COLOR2=#CC536B
+export COLOR3=#A8BDDC
+export COLOR4=#6C3344
+export COLOR5=#D5A9AB
+
 #Prompts
 export PS1='%B%F{yellow}%~%f%b %F{magenta}|>%f ' # Best prompt ever created.
 
