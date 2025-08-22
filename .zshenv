@@ -22,6 +22,9 @@ export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
 export PYTHONCACHEPREFIX="$XDG_CACHE_HOME/python"
 export PYTHONUSERBASE="$XDG_DATA_HOME/python"
 
+# Python interactive startup file
+export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/startup.py"
+
 # XDG Applications
 export BROWSER=/usr/bin/firefox
 export EDITOR=/usr/bin/helix
