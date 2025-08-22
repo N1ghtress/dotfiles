@@ -26,7 +26,7 @@ export PYTHONUSERBASE="$XDG_DATA_HOME/python"
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/startup.py"
 
 # XDG Applications
-export BROWSER=/usr/bin/firefox
+export BROWSER=/usr/bin/librewolf
 export EDITOR=/usr/bin/helix
 export TERMINAL=/usr/bin/kitty
 
