@@ -9,6 +9,7 @@ alias la="lsd -a --color=always --group-directories-first"
 alias ll="lsd -l --color=always --group-directories-first"
 alias lla="lsd -la --color=always --group-directories-first"
 alias grep="grep --color"
+alias pacman="pacman --color always"
 
 # Autocomplete case insensitive
 autoload -Uz compinit && compinit
