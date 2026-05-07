@@ -1,75 +1,32 @@
 @define-color background #6C3344;
-@define-color foreground #D5A9AB;
-@define-color primary #D4747F;
-@define-color secondary #CC536B;
-@define-color alert #A8BDDC;
 
 * {
     font-family: Ubuntu;
     font-weight: 900;
-    font-size: 16px;
-    border-radius: 20px;
+    font-size: 18px;
 }
 
 window#waybar {
-    background-color: transparent;
-    color: @background;
-}
-
-#workspaces {
-    background-color: @primary;
+    background-color: @background;
 }
 
 #workspaces button {
-    margin: 2px;
+    margin: 0 2px;
     transition: all 0.25s ease;
 }
 
-#workspaces button.active {
-    background-color: @secondary;
-    color: @foreground;
-}
-
-#mode {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-}
-
 #clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
 #pulseaudio,
-#pulseaudio-slider,
-#wireplumber,
 #custom-media,
-#custom-power,
-#tray,
-#mode,
-#idle_inhibitor,
-#scratchpad,
-#power-profiles-daemon,
-#window,
-#mpd {
+#workspaces {
     padding: 0 7px;
-    margin: 2px;
-    color: @foreground;
-    background-color: @secondary
+    background-color: transparent;
 }
 
-#custom-power {
-    background-color: rgba(0,0,0,0);
-}
-/* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > * {
     margin-left: 0;
 }
 
-/* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > * {
     margin-right: 0;
 }
@@ -83,22 +40,4 @@ window#waybar {
 
 label:focus {
     background-color: #000000;
-}
-
-#custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
-    min-width: 100px;
-}
-
-#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-    background-color: #ffa000;
-}
-
-#pulsaudio-slider {
-    min-height: 100px;
 }
