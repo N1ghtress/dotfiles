@@ -1,102 +1,42 @@
 // -*- mode: jsonc -*-
 {
     "layer": "top", // Waybar at top layer
-    "height": 30, // Waybar height (to be removed for auto height)
-    "spacing": 2, // Gaps between modules (4px)
-    "margin-top": 10,
-    "margin-left": 10,
-    "margin-right": 10,
-    "modules-left": [
-        "custom/power",
-        "hyprland/workspaces",
-        "custom/media"
-    ],
-    "modules-center": [
-        "clock",
-    ],
-    "modules-right": [
-        "pulseaudio",
-        "cpu",
-    ],
+    "position": "top",
+    "modules-left": ["clock", "custom/media"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["pulseaudio"],
+
     // Modules configuration
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
-        "warp-on-scroll": false,
+        "on-click": "activate",
         "format": "{icon}",
         "format-icons": {
-            "default": "",
-            "active": "",
-        }
+            "default": " ",
+            "active": " ",
+        },
+        "persistent-workspaces": {
+            "*": [1, 2, 3, 4],
+        },
     },
+
     "clock": {
-        "format": "{:%H:%M}",
-        "format-alt": "{%H:%M %A %d %B %Y}",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "calendar": {
-            "mode": "month",
-            "weeks-pos": "right",
-            "on-scroll": 1,
-            "format": {
-                "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-                "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-                "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                "today":      "<span color='#ff6699'><b><u>{}</u></b></span>",
-            },
-        },
-        "actions":  {
-            "on-click-right": "mode",
-            "on-scroll-up": "tz_up",
-            "on-scroll-down": "tz_down",
-            "on-scroll-up": "shift_up",
-            "on-scroll-down": "shift_down",
-        }
+        "format": "󰣇  {:%H:%M}",
+        "format-alt": "󰣇  {:%H:%M %A %d %B %Y}",
     },
-    "cpu": {
-        "format": "{usage}%  ",
-        "tooltip": false,
-        "on-click": "kitty btop"
-    },
-    "memory": {
-        "format": "{}% "
-    },
-    "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
-    },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
+
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} ",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format": "{icon}  {volume}%",
+        "on-click": "pavucontrol",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+            "headphone": " ",
+            "default": "",
         },
-        "on-click": "pavucontrol"
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
     },
-    "pulseaudio/slider": {
-        "min": 0,
-        "max": 100,
-        "orientation": "vertical"  
-    },
+
     "custom/media": {
         "format": "{icon} {}",
         "return-type": "json",
@@ -109,16 +49,4 @@
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
-    "custom/power": {
-        "format" : "󰣇",
-    		"tooltip": false,
-    		"menu": "on-click",
-    		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-    		"menu-actions": {
-    			"shutdown": "systemctl poweroff",
-    			"reboot": "reboot",
-    			"suspend": "systemctl suspend",
-    			"hibernate": "systemctl hibernate"
-    		}
-    }
 }

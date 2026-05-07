@@ -5,30 +5,29 @@
 @define-color alert #A8BDDC;
 
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Ubuntu Bold, Arial, sans-serif;
+    font-family: Ubuntu;
+    font-weight: 900;
     font-size: 16px;
+    border-radius: 20px;
 }
 
 window#waybar {
-    border: 2px solid @alert;
-    background-color: @background;
-    color: @foreground
+    background-color: transparent;
+    color: @background;
 }
 
 #workspaces {
-    margin: 2px 4px;
-    border-radius: 10px;
-    background-color: @primary
+    background-color: @primary;
 }
 
 #workspaces button {
-    padding-left: 4px;
-    padding-right: 8px;
+    margin: 2px;
+    transition: all 0.25s ease;
 }
 
-#workspaces button.urgent {
-    background-color: @alert;
+#workspaces button.active {
+    background-color: @secondary;
+    color: @foreground;
 }
 
 #mode {
