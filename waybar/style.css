@@ -1,6 +1,7 @@
 * {
     font-family: Ubuntu;
-    font-weight: 900;
+    font-style: normal;
+    font-weight: 500;
     font-size: 18px;
 }
 
@@ -9,13 +10,17 @@ window#waybar {
 }
 
 #workspaces button {
-    margin: 0 2px;
-    transition: all 0.25s ease;
+    margin: 0;
+    padding: 0 2px;
 }
 
-#workspaces button:hover {
-    background-color: transparent;
-    color: gray;
+#workspaces .taskbar-window {
+    padding: 0 4px;
+    font-weight: normal;
+}
+
+#workspaces .taskbar-window.active {
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 #clock,

@@ -1,30 +1,26 @@
-// -*- mode: jsonc -*-
+// TODO: Rename certain windows (Kitty - ) (Firefox - ) (Discord - )
+// TODO: Power group modules
 {
+    "reload_style_on_change": true,
     "layer": "top", // Waybar at top layer
     "position": "top",
-    "modules-left": ["clock", "custom/media"],
-    "modules-center": ["hyprland/workspaces"],
+    "modules-left": ["group/power", "clock", "hyprland/workspaces"],
+    "modules-center": [],
     "modules-right": ["pulseaudio"],
 
     // Modules configuration
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
-        "on-click": "activate",
-        "format": "{icon}",
-        "format-icons": {
-            "active": " ",
-            "1": "1",
-            "2": "2",
-            "3": "3",
-            "4": "4",
-            "5": "5",
-            "5": "5",
-            "6": "6",
-        },
-        "persistent-workspaces": {
-            "*": [1, 2, 3, 4],
-        },
+        "on-click": "focus.sh -t  -a {button}",
+        "format": "{windows}",
+        "workspace-taskbar": {
+            "enable": true,
+            "update-active-window": true,
+            "format": "{icon} {title:.30}",
+            "icon-size": 18,
+            "on-click-window": "focus.sh {address} {button}",
+        }
     },
 
     "clock": {
@@ -54,5 +50,15 @@
         "escape": true,
         // "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    "group/power": {
+        "orientation": "inherit",
+        "drawer": {},
+        "modules": [
+            "custom/power",
+            "custom/quit",
+            "custom/lock",
+            "custom/reboot",
+        ]
     },
 }
