@@ -3,10 +3,11 @@
 {
     "reload_style_on_change": true,
     "layer": "top", // Waybar at top layer
-    "position": "top",
-    "modules-left": ["group/power", "clock", "hyprland/workspaces"],
+    "height": 40,
+    "position": "bottom",
+    "modules-left": ["group/power", "hyprland/workspaces"],
     "modules-center": [],
-    "modules-right": ["pulseaudio"],
+    "modules-right": ["pulseaudio", "clock"],
 
     // Modules configuration
     "hyprland/workspaces": {
