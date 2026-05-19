@@ -1,5 +1,7 @@
 // TODO: Rename certain windows (Kitty - ) (Firefox - ) (Discord - )
 // TODO: Power group modules
+// TODO: Pulseaudio sink selector
+// TODO: Center %H:%M
 {
     "reload_style_on_change": true,
     "layer": "top", // Waybar at top layer
@@ -9,7 +11,6 @@
     "modules-center": [],
     "modules-right": ["pulseaudio", "clock"],
 
-    // Modules configuration
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -21,12 +22,14 @@
             "format": "{icon} {title:.30}",
             "icon-size": 18,
             "on-click-window": "focus.sh {address} {button}",
+        },
+        "persistent-workspaces": {
+            "*": [1, 2, 3, 4],
         }
     },
 
     "clock": {
-        "format": "{:%H:%M}",
-        "format-alt": "{:%H:%M %A %d %B %Y}",
+        "format": "{:%H:%M\n%d/%m/%Y}",
     },
 
     "pulseaudio": {
