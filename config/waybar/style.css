@@ -1,0 +1,20 @@
+@import "styles/clock.css";
+@import "styles/colors.css";
+@import "styles/hyprland.css";
+@import "styles/power.css";
+@import "styles/pulseaudio.css";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    min-height: 0px;
+    border: none;
+    border-radius: 0;
+    font-family: Ubuntu;
+    font-size: 18px;
+}
+
+window#waybar {
+    color: @on_background;
+    background-color: @background;
+}

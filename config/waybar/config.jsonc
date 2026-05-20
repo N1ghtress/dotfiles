@@ -1,0 +1,25 @@
+{
+    "reload_style_on_change": true,
+    "layer": "top",
+    "height": 42,
+    "position": "bottom",
+    "include": [
+        "./modules/clock.jsonc",
+        "./modules/hyprland.jsonc",
+        "./modules/media.jsonc",
+        "./modules/power.jsonc",
+        "./modules/pulseaudio.jsonc",
+    ],
+    "modules-left": [
+        "group/power",
+        "hyprland/workspaces",
+    ],
+    "modules-center": [
+        
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "custom/pulseaudio",
+        "clock",
+    ],
+}

@@ -1,0 +1,26 @@
+#! /bin/sh
+
+# If not running interactively, skip rest
+[[ $- != *i* ]] && return
+
+# Aliases
+alias ls="lsd --color=always --group-directories-first"
+alias la="lsd -a --color=always --group-directories-first"
+alias ll="lsd -l --color=always --group-directories-first"
+alias lla="lsd -la --color=always --group-directories-first"
+alias ps="ps -f"
+alias grep="grep --color"
+alias pacman="pacman --color always"
+alias matugen="matugen --prefer saturation --show-colors"
+
+# Autocomplete case insensitive
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+alias c="clear"
+alias hx="helix"
+
+# Key bindings
+bindkey "^[[3~" delete-char
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word

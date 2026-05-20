@@ -1,25 +1,20 @@
 #!/bin/bash
-
-# This script removes directories and then set up a symlink
+# This script sets up symbolic links in $HOME, $XDG_CONFIG_HOME and $HOME/.local/bin directories
 
 if [[ $EUID -eq 0 ]]; then
    echo "Do not run a stranger's script as root ! This script shouldn't be ran as root." 1>&2
    exit 1
 fi
 
-CURRENT_DIR="$(pwd)"
-CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
+update_sym_links () {
+   shopt -s dotglob
+   for f in $1/*; do
+      # echo "$1 $2"
+      ln -sfv $f $2
+   done
+   shopt -u dotglob
+}
 
-rm -f $HOME/.zshenv
-ln -sfv $CURRENT_DIR/.zshenv $HOME/.zshenv
-
-rm -f $HOME/.zshrc
-ln -sfv $CURRENT_DIR/.zshrc $HOME/.zshrc
-
-for d in $CURRENT_DIR/*/; do
-   IFS='/' read -ra DIRS <<< "$d"
-   SRC_DIR=${d%/}
-   DST_DIR=$CONFIG_HOME/${DIRS[-1]}
-   rm -irv $DST_DIR
-   ln -sfv $SRC_DIR $DST_DIR
-done
+update_sym_links $(pwd)/config ${XDG_CONFIG_HOME:-$HOME/.config}
+update_sym_links $(pwd)/home $HOME
+update_sym_links $(pwd)/scripts $HOME/.local/bin

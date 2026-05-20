@@ -1,0 +1,7 @@
+// TODO: Center %H:%M
+{
+    "clock": {
+        "format": "{:%H:%M\n%d/%m/%Y}",
+        "tooltip": "false",
+    },
+}

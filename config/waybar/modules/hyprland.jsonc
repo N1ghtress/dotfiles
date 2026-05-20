@@ -1,0 +1,17 @@
+{
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{windows}",
+        "workspace-taskbar": {
+            "enable": true,
+            "update-active-window": true,
+            "format": "{icon}",
+            "icon-size": 24,
+            "on-click-window": "focus.sh {address} {button}",
+        },
+        "persistent-workspaces": {
+            "*": [1, 2, 3, 4],
+        }
+    },
+}

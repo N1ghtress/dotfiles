@@ -1,0 +1,50 @@
+[config]
+
+[config.wallpaper]
+set = true
+command = "hyprctl hyprpaper wallpaper ',{{image}}'"
+
+[templates.firefox-website-colors]
+input_path = "./templates/firefox-colors.css"
+output_path = "~/.mozilla/firefox/lxeeoocp.default-release/chrome/colors.css"
+
+[templates.helix]
+input_path = './templates/helix.toml'
+output_path = '~/.config/helix/themes/matugen.toml'
+
+[templates.hyprland]
+input_path = "./templates/hyprland-colors.lua"
+output_path = "~/.config/hypr/colors.lua"
+
+[templates.gtk3]
+input_path = './templates/gtk-colors.css'
+output_path = '~/.config/gtk-3.0/colors.css'
+post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
+
+[templates.gtk4]
+input_path = './templates/gtk-colors.css'
+output_path = '~/.config/gtk-4.0/colors.css'
+post_hook = '~/.config/matugen/post-hook-scripts/gtk-themes-reload.sh'
+
+[templates.kitty]
+input_path = './templates/kitty-colors.conf'
+output_path = '~/.config/kitty/themes/matugen.conf'
+post_hook = "kitty +kitten themes --reload-in=all Matugen"
+
+[templates.rofi]
+input_path = './templates/rofi-colors.rasi'
+output_path = '~/.config/rofi/colors.rasi'
+
+[templates.waybar]
+input_path = "./templates/waybar-colors.css"
+output_path = "~/.config/waybar/styles/colors.css"
+post_hook = "pkill -SIGUSR2 waybar"
+
+[templates.steam]
+input_path = './templates/steam.css'
+output_path = '~/.config/AdwSteamGtk/custom.css'
+post_hook =  'adwaita-steam-gtk -i'
+
+[templates.obs]
+input_path = './templates/matugen.obt'
+output_path = '~/.config/obs-studio/themes/matugen.obt'
