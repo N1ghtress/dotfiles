@@ -1,0 +1,7 @@
+{
+    "custom/matugen": {
+        "on-click": "setsid wallpaperpicker",
+        "format": "󱡶",
+        "tooltip": false,
+    },
+}

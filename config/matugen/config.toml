@@ -2,7 +2,7 @@
 
 [config.wallpaper]
 set = true
-command = "hyprctl hyprpaper wallpaper ',{{image}}'"
+command = "hyprctl hyprpaper wallpaper 'DP-2,{{image}}',hyprctl hyprpaper wallpaper 'HDMI-A-2,{{image}}'"
 
 [templates.firefox-website-colors]
 input_path = "./templates/firefox-colors.css"

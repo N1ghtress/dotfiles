@@ -1,14 +1,13 @@
-@theme "~/.config/rofi/classic.rasi"
-
 configuration {
-	modi: "window,run,drun,ssh";
+	modi: "drun,run,ssh,window";
 	show-icons: true;
-	icon-theme: "Papirus";
+	display-drun: "";
+    display-run: "";
+    display-window:"";
+	display-ssh: "󰣀";
 	terminal: "zsh";
-	drun-match-fields: "name,generic,exec,categories,keywords";
-	drun-display-format: "{icon} {name}";
-	display-window: "Windows";
-	display-run: "Exec";
-	display-ssh: "Ssh";
-	display-drun: "Apps";
+	drun-display-format: "{name}";
+	window-format: "{w} · {c} · {t}";
 }
+
+@theme "~/.config/rofi/classic.rasi"

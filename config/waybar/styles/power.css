@@ -1,13 +1,5 @@
 @import "./colors.css";
 
-#custom-power:hover,
-#custom-lock:hover,
-#custom-reboot:hover,
-#custom-quit:hover {
-    color: @on_primary;
-    background-color: @primary;
-}
-
 #custom-power,
 #custom-lock,
 #custom-reboot,

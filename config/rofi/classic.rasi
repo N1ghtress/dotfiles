@@ -1,52 +1,110 @@
 @import "colors.rasi"
+
 * {
-	border: 0;
-	margin: 0;
-	padding: 0;
-	spacing: 0;
 	font: "Ubuntu Bold 14";
-	background-color: @primary-container;
-	text-color: @on-primary-container;
 }
 
+/* Main window */
 window {
-	width: 25%;
+	width: 30%;
+	border-radius: 20px;
+	background-color: @primary;	
 }
 
+/* Main box */
+mainbox {
+	background-color: transparent;
+	children: ["inputbar", "listbox"];
+}
+listbox {
+	spacing: 20px;
+	padding: 20px;
+	background-color: transparent;
+	children: ["message", "listview"];
+}
+
+/* Input bar */
 inputbar {
-	padding: 0.25em;
-	children: [entry, prompt];
+	background-image: url("/home/knightress/Images/Wallpaper/yasuo-and-riven-spirit-blossom.jpg", width);
+	spacing: 10px;
+	padding: 75px 60px;
+	children: ["textbox-prompt-colon", "entry", "mode-switcher"];
 }
-
-prompt {
-	padding: 0.5em;
+textbox-prompt-colon {
+	expand: false;
+	str: "";
+	padding: 12px 20px 12px 15px;
+	border-radius: 100%;
+	background-color: @surface;
+	text-color: @on-surface;
 }
-
 entry {
-	padding: 0.5em;
+	padding: 12px 16px;
+	border-radius: 100%;
+	background-color: @surface;
+	text-color: @on-surface;
+	cursor: text;
+	placeholder: "Search";
+	placeholder-color: "inherit";
 }
-
-listview {
-	lines: 8;
-}
-
-element {
-	padding: 0.5em;
-}
-element-icon { size: 1.5em; }
-element-text { padding: 0.25em; }
-
-element selected, element-icon selected, element-text selected {
-	text-color: @on-secondary-container;
-	background-color: @secondary-container;
-}
-
 mode-switcher {
-	padding: 0.5em;
-	background-color: #888800;
+	spacing: 10px;
+	background-color: transparent;
+	text-color: @on-surface;
+}
+button {
+	width: 45px;
+	padding: 12px 14px 12px 10px;
+	border-radius: 100%;
+	background-color: @surface;
+	text-color: @on-surface;
+	cursor: pointer;
+}
+button selected {
+	background-color: @inverse-surface;
+	text-color: @inverse-on-surface;
 }
 
-Button {
-	padding: 0.5em;
-	background-color: #008888;
+/* Listview */
+listview {
+	columns: 1;
+	lines: 8;
+	cycle: true;
+	dynamic: true;
+	scrollbar: false;
+	layout: vertical;
+	reverse: false;
+	fixed-height: true;
+	fixed-columns: true;
+	spacing: 10px;
+	background-color: transparent;
+	text-color: @on-surface;
+	cursor: "default";
+}
+
+/* Elements */
+element {
+	spacing: 10px;
+	padding: 4px 20px;
+	border-radius: 100%;
+	background-color: transparent;
+	text-color: @on-primary;
+	cursor: pointer;
+}
+element-icon {
+	background-color: transparent;
+	text-color: inherit;
+	size: 32px;
+	cursor: inherit;
+}
+element-text {
+	background-color: transparent;
+	text-color: inherit;
+	cursor: inherit;
+	vertical-align: 0.5;
+	horizontal-align: 0.0;
+}
+element selected, element-icon selected, element-text selected {
+	background-color: @surface;
+	text-color: @on-surface;
 }

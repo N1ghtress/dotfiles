@@ -7,7 +7,7 @@
         },
         "scroll-step": 5.0,
         "on-click": "exec pacmd list-sink-inputs | awk '/application.name/' | head -n 1 | awk -F ' = ' '{print $2}' | tr -d '\"'",
-        "on-click-right": "pactl list sinks | awk '/device.description/' | awk -F ' = ' '{print $2}' | tr -d '\"' | wofi -dij",
+        "on-click-right": "audioswitcher",
         "on-click-middle": "exec pavucontrol",
     },
 }

@@ -1,6 +1,7 @@
 @import "styles/clock.css";
 @import "styles/colors.css";
 @import "styles/hyprland.css";
+@import "styles/matugen.css";
 @import "styles/power.css";
 @import "styles/pulseaudio.css";
 
@@ -17,4 +18,15 @@
 window#waybar {
     color: @on_background;
     background-color: @background;
+}
+
+#clock:hover,
+#custom-matugen:hover,
+#custom-power:hover,
+#custom-lock:hover,
+#custom-reboot:hover,
+#custom-quit:hover,
+#pulseaudio:hover {
+    color: @on_primary;
+    background-color: @primary;
 }

@@ -11,7 +11,6 @@ alias lla="lsd -la --color=always --group-directories-first"
 alias ps="ps -f"
 alias grep="grep --color"
 alias pacman="pacman --color always"
-alias matugen="matugen --prefer saturation --show-colors"
 
 # Autocomplete case insensitive
 autoload -Uz compinit && compinit

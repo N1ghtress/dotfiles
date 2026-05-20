@@ -6,6 +6,7 @@
     "include": [
         "./modules/clock.jsonc",
         "./modules/hyprland.jsonc",
+        "./modules/matugen.jsonc",
         "./modules/media.jsonc",
         "./modules/power.jsonc",
         "./modules/pulseaudio.jsonc",
@@ -18,8 +19,8 @@
         
     ],
     "modules-right": [
+        "custom/matugen",
         "pulseaudio",
-        "custom/pulseaudio",
         "clock",
     ],
 }

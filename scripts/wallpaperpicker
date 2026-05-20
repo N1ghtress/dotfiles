@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+count=$(ls $WALLPAPER_DIR | wc -l)
+wallpaper=$WALLPAPER_DIR/$(ls $WALLPAPER_DIR | rofi -dmenu -i -L $count) || exit 0
+echo $count
+matugen --verbose --prefer lightness image $wallpaper
